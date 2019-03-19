@@ -1,0 +1,622 @@
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Module.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Module"
+Output Format                      : NGC
+Target Device                      : xa3s1500-4-fgg456
+
+---- Source Options
+Top Module Name                    : Top_Module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Top_Module>.
+Module <Top_Module> is correct for synthesis.
+ 
+Analyzing module <PC> in library <work>.
+Module <PC> is correct for synthesis.
+ 
+Analyzing module <Adder> in library <work>.
+Module <Adder> is correct for synthesis.
+ 
+Analyzing module <Instruction_Memory> in library <work>.
+Module <Instruction_Memory> is correct for synthesis.
+ 
+Analyzing module <MUX_2x1_32bit> in library <work>.
+Module <MUX_2x1_32bit> is correct for synthesis.
+ 
+Analyzing module <IFID_Reg> in library <work>.
+Module <IFID_Reg> is correct for synthesis.
+ 
+Analyzing module <Control> in library <work>.
+Module <Control> is correct for synthesis.
+ 
+Analyzing module <Reg_File> in library <work>.
+Module <Reg_File> is correct for synthesis.
+ 
+Analyzing module <Comparator> in library <work>.
+Module <Comparator> is correct for synthesis.
+ 
+Analyzing module <Sign_Extend> in library <work>.
+Module <Sign_Extend> is correct for synthesis.
+ 
+Analyzing module <HazardDetection_Unit> in library <work>.
+Module <HazardDetection_Unit> is correct for synthesis.
+ 
+Analyzing module <MUX_2x1_8bit> in library <work>.
+Module <MUX_2x1_8bit> is correct for synthesis.
+ 
+Analyzing module <IDEX_Reg> in library <work>.
+Module <IDEX_Reg> is correct for synthesis.
+ 
+Analyzing module <Alu_Control> in library <work>.
+Module <Alu_Control> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <Mux3x1_32> in library <work>.
+Module <Mux3x1_32> is correct for synthesis.
+ 
+Analyzing module <MUX_2x1_5bit> in library <work>.
+Module <MUX_2x1_5bit> is correct for synthesis.
+ 
+Analyzing module <forwardingUnit> in library <work>.
+Module <forwardingUnit> is correct for synthesis.
+ 
+Analyzing module <Sll_32bit> in library <work>.
+Module <Sll_32bit> is correct for synthesis.
+ 
+Analyzing module <EXMEM_Reg> in library <work>.
+Module <EXMEM_Reg> is correct for synthesis.
+ 
+Analyzing module <Data_Memory> in library <work>.
+Module <Data_Memory> is correct for synthesis.
+ 
+Analyzing module <MEM_WB_Reg> in library <work>.
+Module <MEM_WB_Reg> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <PC>.
+    Related source file is "../../Users/User/Desktop/co-projectt/PC.v".
+    Found 32-bit register for signal <ReadAddress>.
+    Found 32-bit subtractor for signal <ReadAddress$addsub0000> created at line 14.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <PC> synthesized.
+
+
+Synthesizing Unit <Adder>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Adder.v".
+    Found 32-bit adder for signal <Out>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+
+Synthesizing Unit <Instruction_Memory>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Instruction_Memory.v".
+Unit <Instruction_Memory> synthesized.
+
+
+Synthesizing Unit <MUX_2x1_32bit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Multiplexers.v".
+Unit <MUX_2x1_32bit> synthesized.
+
+
+Synthesizing Unit <IFID_Reg>.
+    Related source file is "../../Users/User/Desktop/co-projectt/IFID_Reg.v".
+    Found 32-bit register for signal <PC4_D>.
+    Found 32-bit register for signal <Instruction_D>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <IFID_Reg> synthesized.
+
+
+Synthesizing Unit <Control>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Control.v".
+Unit <Control> synthesized.
+
+
+Synthesizing Unit <Reg_File>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Reg_File.v".
+    Found 32x32-bit dual-port RAM <Mram_RF> for signal <RF>.
+    Found 32x32-bit dual-port RAM <Mram_RF_ren> for signal <RF>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Reg_File> synthesized.
+
+
+Synthesizing Unit <Comparator>.
+    Related source file is "../../Users/User/Desktop/co_project/Comparator.v".
+    Found 32-bit xor2 for signal <XOR_output>.
+Unit <Comparator> synthesized.
+
+
+Synthesizing Unit <Sign_Extend>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Sign Extend.v".
+Unit <Sign_Extend> synthesized.
+
+
+Synthesizing Unit <HazardDetection_Unit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Hazard Detection Unit.v".
+    Found 5-bit comparator equal for signal <PC_hold$cmp_eq0000> created at line 10.
+    Found 5-bit comparator equal for signal <PC_hold$cmp_eq0001> created at line 10.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <HazardDetection_Unit> synthesized.
+
+
+Synthesizing Unit <MUX_2x1_8bit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Multiplexers.v".
+Unit <MUX_2x1_8bit> synthesized.
+
+
+Synthesizing Unit <IDEX_Reg>.
+    Related source file is "../../Users/User/Desktop/co-projectt/IDEX_Reg.v".
+    Found 2-bit register for signal <IDEX_wbctrl>.
+    Found 5-bit register for signal <IDEX_rd>.
+    Found 5-bit register for signal <IDEX_rs>.
+    Found 5-bit register for signal <IDEX_rt>.
+    Found 32-bit register for signal <PC4_EX>.
+    Found 6-bit register for signal <IDEX_funct>.
+    Found 2-bit register for signal <IDEX_memCtrl>.
+    Found 4-bit register for signal <IDEX_exctrl>.
+    Found 1-bit register for signal <control_branch_EX>.
+    Found 5-bit register for signal <IDEX_shamt>.
+    Found 32-bit register for signal <IDEX_offset>.
+    Found 32-bit register for signal <IDEX_readData1>.
+    Found 32-bit register for signal <IDEX_readData2>.
+    Summary:
+	inferred 163 D-type flip-flop(s).
+Unit <IDEX_Reg> synthesized.
+
+
+Synthesizing Unit <Alu_Control>.
+    Related source file is "../../Users/User/Desktop/co-projectt/ALU_Control.v".
+    Found 4-bit 3-to-1 multiplexer for signal <OP>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Alu_Control> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "../../Users/User/Desktop/co-projectt/ALU.v".
+    Found 32-bit 6-to-1 multiplexer for signal <Result>.
+    Found 32-bit addsub for signal <Result$addsub0000>.
+    Found 32-bit comparator less for signal <Result$cmp_lt0000> created at line 21.
+    Found 32-bit shifter logical left for signal <Result$shift0000> created at line 20.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <Mux3x1_32>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Multiplexers.v".
+    Found 32-bit 3-to-1 multiplexer for signal <muxOut>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <Mux3x1_32> synthesized.
+
+
+Synthesizing Unit <MUX_2x1_5bit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Multiplexers.v".
+Unit <MUX_2x1_5bit> synthesized.
+
+
+Synthesizing Unit <forwardingUnit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Forwarding Unit.v".
+    Found 5-bit comparator equal for signal <forwardA$cmp_eq0000> created at line 13.
+    Found 5-bit comparator equal for signal <forwardA$cmp_eq0001> created at line 19.
+    Found 5-bit comparator not equal for signal <forwardA$cmp_ne0002> created at line 19.
+    Found 5-bit comparator equal for signal <forwardB$cmp_eq0000> created at line 31.
+    Found 5-bit comparator equal for signal <forwardB$cmp_eq0001> created at line 37.
+    Found 5-bit comparator not equal for signal <forwardB$cmp_ne0000> created at line 37.
+    Summary:
+	inferred   6 Comparator(s).
+Unit <forwardingUnit> synthesized.
+
+
+Synthesizing Unit <Sll_32bit>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Sll_32bit.v".
+Unit <Sll_32bit> synthesized.
+
+
+Synthesizing Unit <EXMEM_Reg>.
+    Related source file is "../../Users/User/Desktop/co-projectt/EXMEM_Reg.v".
+    Found 32-bit register for signal <Address>.
+    Found 1-bit register for signal <MemRead>.
+    Found 32-bit register for signal <WD>.
+    Found 2-bit register for signal <WB_M>.
+    Found 1-bit register for signal <MemWrite>.
+    Found 5-bit register for signal <WR_M>.
+    Summary:
+	inferred  73 D-type flip-flop(s).
+Unit <EXMEM_Reg> synthesized.
+
+
+Synthesizing Unit <Data_Memory>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Data_Memory.v".
+    Summary:
+	inferred   1 RAM(s).
+Unit <Data_Memory> synthesized.
+
+
+Synthesizing Unit <MEM_WB_Reg>.
+    Related source file is "../../Users/User/Desktop/co-projectt/MEMWB_Reg.v".
+    Found 32-bit register for signal <Alu_Result>.
+    Found 32-bit register for signal <RD>.
+    Found 1-bit register for signal <RegWrite>.
+    Found 5-bit register for signal <WR>.
+    Found 1-bit register for signal <MemtoReg>.
+    Summary:
+	inferred  71 D-type flip-flop(s).
+Unit <MEM_WB_Reg> synthesized.
+
+
+Synthesizing Unit <Top_Module>.
+    Related source file is "../../Users/User/Desktop/co-projectt/Top_Module.v".
+Unit <Top_Module> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 1024x32-bit single-port RAM                           : 1
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 27
+ 1-bit register                                        : 5
+ 2-bit register                                        : 3
+ 32-bit register                                       : 11
+ 4-bit register                                        : 1
+ 5-bit register                                        : 6
+ 6-bit register                                        : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 11
+ 32-bit latch                                          : 1
+# Comparators                                          : 9
+ 32-bit comparator less                                : 1
+ 5-bit comparator equal                                : 6
+ 5-bit comparator not equal                            : 2
+# Multiplexers                                         : 4
+ 32-bit 3-to-1 multiplexer                             : 2
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Synthesizing (advanced) Unit <Top_Module>.
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite_WB>   | high     |
+    |     addrA          | connected to signal <WR_WB>         |          |
+    |     diA            | connected to signal <WD_WB>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <Instruction_hold> | low      |
+    |     addrB          | connected to signal <Instruction>   |          |
+    |     doB            | connected to signal <RD2>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <reg_file/Mram_RF> will be implemented as a BLOCK RAM, absorbing the following register(s): <IFID/Instruction_D>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite_WB>   | high     |
+    |     addrA          | connected to signal <WR_WB>         |          |
+    |     diA            | connected to signal <WD_WB>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <Instruction_hold> | low      |
+    |     addrB          | connected to signal <Instruction>   |          |
+    |     doB            | connected to signal <RD1>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Top_Module> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 1024x32-bit single-port distributed RAM               : 1
+ 32x32-bit dual-port block RAM                         : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 403
+ Flip-Flops                                            : 403
+# Latches                                              : 12
+ 1-bit latch                                           : 11
+ 32-bit latch                                          : 1
+# Comparators                                          : 9
+ 32-bit comparator less                                : 1
+ 5-bit comparator equal                                : 6
+ 5-bit comparator not equal                            : 2
+# Multiplexers                                         : 4
+ 32-bit 3-to-1 multiplexer                             : 2
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Module, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <Top_Module> :
+	Found 3-bit shift register for signal <WD_WB<0>>.
+	Found 3-bit shift register for signal <WD_WB<1>>.
+	Found 3-bit shift register for signal <WD_WB<2>>.
+	Found 3-bit shift register for signal <WD_WB<3>>.
+	Found 3-bit shift register for signal <WD_WB<4>>.
+	Found 3-bit shift register for signal <WD_WB<5>>.
+	Found 3-bit shift register for signal <WD_WB<6>>.
+	Found 3-bit shift register for signal <WD_WB<7>>.
+	Found 3-bit shift register for signal <WD_WB<8>>.
+	Found 3-bit shift register for signal <WD_WB<9>>.
+	Found 3-bit shift register for signal <WD_WB<10>>.
+	Found 3-bit shift register for signal <WD_WB<11>>.
+	Found 3-bit shift register for signal <WD_WB<12>>.
+	Found 3-bit shift register for signal <WD_WB<13>>.
+	Found 3-bit shift register for signal <WD_WB<14>>.
+	Found 3-bit shift register for signal <WD_WB<15>>.
+	Found 3-bit shift register for signal <WD_WB<16>>.
+	Found 3-bit shift register for signal <WD_WB<17>>.
+	Found 3-bit shift register for signal <WD_WB<18>>.
+	Found 3-bit shift register for signal <WD_WB<19>>.
+	Found 3-bit shift register for signal <WD_WB<20>>.
+	Found 3-bit shift register for signal <WD_WB<21>>.
+	Found 3-bit shift register for signal <WD_WB<22>>.
+	Found 3-bit shift register for signal <WD_WB<23>>.
+	Found 3-bit shift register for signal <WD_WB<24>>.
+	Found 3-bit shift register for signal <WD_WB<25>>.
+	Found 3-bit shift register for signal <WD_WB<26>>.
+	Found 3-bit shift register for signal <WD_WB<27>>.
+	Found 3-bit shift register for signal <WD_WB<28>>.
+	Found 3-bit shift register for signal <WD_WB<29>>.
+	Found 3-bit shift register for signal <WD_WB<30>>.
+	Found 3-bit shift register for signal <WD_WB<31>>.
+Unit <Top_Module> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Shift Registers                                      : 32
+ 3-bit shift register                                  : 32
+
+=========================================================================
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top_Module.ngr
+Top Level Output File Name         : Top_Module
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+# BELS                             : 3
+#      GND                         : 2
+#      VCC                         : 1
+# FlipFlops/Latches                : 32
+#      FD                          : 32
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Shift Registers                  : 32
+#      SRL16                       : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa3s1500fgg456-4 
+
+ Number of Slices:                       16  out of  13312     0%  
+ Number of Slice Flip Flops:             32  out of  26624     0%  
+ Number of 4 input LUTs:                 32  out of  26624     0%  
+    Number used as logic:                 0
+    Number used as Shift registers:      32
+ Number of IOs:                           2
+ Number of bonded IOBs:                   1  out of    333     0%  
+ Number of BRAMs:                         1  out of     32     3%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 65    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.398ns (Maximum Frequency: 294.291MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.398ns (frequency: 294.291MHz)
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Delay:               3.398ns (Levels of Logic = 0)
+  Source:            Mshreg_WD_WB_0 (FF)
+  Destination:       WD_WB_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mshreg_WD_WB_0 to WD_WB_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16:CLK->Q          1   3.195   0.000  Mshreg_WD_WB_0 (Mshreg_WD_WB_0)
+     FD:D                      0.203          WD_WB_0
+    ----------------------------------------
+    Total                      3.398ns (3.398ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.67 secs
+ 
+--> 
+
+Total memory usage is 314132 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings : 1366 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+

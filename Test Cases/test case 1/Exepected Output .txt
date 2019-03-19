@@ -1,0 +1,22 @@
+Register File:
+
+//address        	//register name		//value in hexa 
+
+
+9			$t1			1
+
+18			$s2			5
+
+20			$s4			0
+
+13			$t5			4
+
+23			$s7			0
+
+
+
+
+Data Memory :
+
+
+2			0($t3)			3

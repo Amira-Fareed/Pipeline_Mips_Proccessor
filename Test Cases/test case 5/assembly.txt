@@ -1,0 +1,5 @@
+// Data Hazard, MEM/WB forwarding, 1 Stall, 1 instructions before.
+lw $s1,4($t4)
+sub $s3,$s5,$s1
+lw $s4,0($t5)
+sw $t4,0($t2)

@@ -1,0 +1,8 @@
+// Control Hazard, Data Hazard MEM/WB forwarding, 1 Stalls before, 2 stalls after
+
+lw $s1,0($s2)
+beq $s1,$s3,L
+add $s2,$s1,$s4
+add $s2,$s3,$s4
+add $s5,$s2,$s1
+L: sub $s4,$s5,$s6

@@ -1,0 +1,7 @@
+// No Hazards
+add $s2,$s1,$s3
+sub $s4,$s5,$s6
+lw $t5,0($t2)
+sw $t4,0($t3)
+sll $s7,$s7,2
+slt $t1,$s1,$s2

@@ -1,0 +1,4 @@
+// Data Hazard, EX/MEM forwarding, No Stalls, 1 & 2 instructions before.
+add $s2,$s1,$s4
+add $s2,$s3,$s4
+add $s5,$s2,$s1

@@ -1,0 +1,6 @@
+// Control Hazards, No forwarding, 2 Stalls, branch taken
+beq $s3,$s2,L
+add $s2,$s1,$s4
+add $s2,$s3,$s4
+add $s5,$s2,$s1
+L: sub $s7,$s4,$s3

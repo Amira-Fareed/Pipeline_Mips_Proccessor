@@ -1,0 +1,11 @@
+Register File:
+
+//address       	//register name		//value in hexa 
+
+17			$s1			6 (0x6)
+
+18  			$s2			4 (0x4)
+
+21			$s5			10 (0xA)
+
+23			$s7			-2 (0xFFFFFFFE)

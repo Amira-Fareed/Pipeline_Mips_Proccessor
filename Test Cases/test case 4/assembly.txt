@@ -1,0 +1,5 @@
+// Data Hazard, no forwarding, No Stalls, 3 instructions before.
+add $s2,$s1,$s0
+add $t2,$t1,$t0
+add $t5,$t4,$t3
+add $s3,$s2,$s1
